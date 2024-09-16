@@ -1,1 +1,195 @@
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BytePredictor - Стратегии и сигналы казино</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Чёрный фон */
+            color: #f8f9fa;
+        }
+        header {
+            background-color: #6f42c1; /* Фиолетовый цвет */
+            color: #f8f9fa;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .header-title {
+            font-size: 24px;
+            font-weight: bold;
+            flex: 1;
+            text-align: center; /* Центрирование заголовка */
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            z-index: 2000; /* Убедитесь, что иконка бургер-меню над другими элементами */
+        }
+        .menu-toggle div {
+            background-color: #f8f9fa; /* Белый цвет для линий */
+            height: 3px;
+            margin: 5px 0;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #f8f9fa;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #fd7e14; /* Оранжевый цвет */
+        }
+        .container {
+            padding: 80px 20px 60px; /* Учитываем высоту шапки и футера */
+            text-align: center;
+        }
+        .button {
+            display: block;
+            width: 250px;
+            padding: 15px;
+            margin: 10px auto;
+            border: none;
+            border-radius: 8px;
+            background-color: #fd7e14; /* Оранжевый цвет */
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .button:hover {
+            background-color: #e36c0a;
+            transform: scale(1.05);
+        }
+        .button:active {
+            background-color: #c53800;
+            transform: scale(1);
+        }
+        footer {
+            background-color: #6f42c1; /* Фиолетовый цвет */
+            color: #f8f9fa;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .description {
+            font-size: 18px;
+            margin: 20px 0;
+        }
+
+        /* Мобильные стили */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 20px; /* Уменьшенный размер текста для мобильных устройств */
+            }
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                left: 15px; /* Перемещаем бургер-меню влево */
+                top: 15px; /* Отступ от верхнего края шапки */
+            }
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #222; /* Тёмно-серый фон для меню */
+                position: fixed;
+                top: 60px; /* Учитываем высоту шапки */
+                left: 0;
+                z-index: 1000;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+                padding: 10px 0;
+            }
+            nav.active {
+                display: flex;
+            }
+            nav a {
+                padding: 15px;
+                border-bottom: 1px solid #f8f9fa;
+                text-align: center;
+            }
+            .menu-toggle.active div:nth-child(1) {
+                transform: rotate(45deg);
+                position: absolute;
+                top: 9px;
+                left: 0; /* Перемещаем первую линию влево */
+            }
+            .menu-toggle.active div:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.active div:nth-child(3) {
+                transform: rotate(-45deg);
+                position: absolute;
+                top: 9px;
+                left: 0; /* Перемещаем третью линию влево */
+            }
+            .close-menu {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-title">Стратегии и сигналы казино</div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav-menu">
+            <div class="close-menu" onclick="toggleMenu()">×</div>
+            <a href="#">LuckyJet</a>
+            <a href="#">Trading 1Win</a>
+            <a href="#">CoinFlip Strategy</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="description">
+            Добро пожаловать на наш сайт, посвящённый стратегиям и сигналам для казино. Мы предлагаем проверенные методы и советы для улучшения ваших шансов на успех в азартных играх.
+        </div>
+          <a href="/buy.html" class="button">28.99$ | Buy private | 30 days (LuckyJet Predictor, Trading Predictor, Strategy CoinFlip)</a>
+    </div>
+    <footer>
+        © 2024 Стратегии и сигналы казино. Все права защищены.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            var menuToggle = document.querySelector('.menu-toggle');
+            menu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
